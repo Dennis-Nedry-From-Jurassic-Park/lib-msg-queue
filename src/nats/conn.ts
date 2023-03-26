@@ -9,3 +9,7 @@ export const nats_client = connect({
     verbose: true,
     maxPingOut: 5
 });
+
+delete process.env.NATS_TOKEN
+delete process.env.NATS_SERVER
+delete process.env.NATS_PORT
