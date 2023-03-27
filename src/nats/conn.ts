@@ -10,10 +10,6 @@ export const nats_client = connect({
     maxPingOut: 5
 });
 
-console.log(process.env.NATS_TOKEN);
-console.log(process.env.NATS_SERVER);
-console.log(process.env.NATS_PORT);
-
 delete process.env.NATS_TOKEN
 delete process.env.NATS_SERVER
 delete process.env.NATS_PORT
