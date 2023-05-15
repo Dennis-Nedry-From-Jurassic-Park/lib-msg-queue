@@ -18,7 +18,8 @@
         "lint": "eslint --color --fix --ext .ts,.js,.jsx packages/backend/apps/ms-src/src",
         "lint-q": "eslint --color --fix --quiet --ext .ts,.js,.jsx packages/backend/apps/ms-cron/src",
         "test": "jest",
-        "main": "doppler run -- ts-node -r tsconfig-paths/register src/nats/main.ts"
+        "main": "doppler run -- ts-node -r tsconfig-paths/register src/nats/main.ts",
+        "stream": "doppler run -- ts-node -r tsconfig-paths/register src/nats/stream.ts"
     },
     "dependencies": {
         "nats": "^2.13.1",
