@@ -1,4 +1,3 @@
-import {nats_client} from "../../../../atr-cex-crypto/shared/lib-msg-queue/src/nats/conn";
 import {
     DiscardPolicy, Placement,
     RetentionPolicy,
@@ -6,8 +5,7 @@ import {
     StreamConfig,
     StreamUpdateConfig
 } from "nats/lib/nats-base-client/types";
-
-
+import {nats_client} from "./conn";
 
 export const create_stream = async (
     stream: string,
@@ -42,20 +40,8 @@ export const create_stream = async (
         mirror_direct: false
     } as StreamConfig
 
-    //const obj = {...streamConfig, ...StreamUpdateConfig}
-
     (await nats_client)
         .jetstreamManager()
         .then(it => it.streams.add(streamConfig))
         .catch(err => console.log(err))
 }
-
-// create_stream(
-//     'stream',
-//     ["s1", "s2"],
-//     RetentionPolicy.Limits,
-//     StorageType.File,
-//     -1,
-//     false,
-//     DiscardPolicy.Old
-// );
