@@ -18,6 +18,7 @@
         "lint": "eslint --color --fix --ext .ts,.js,.jsx packages/backend/apps/ms-src/src",
         "lint-q": "eslint --color --fix --quiet --ext .ts,.js,.jsx packages/backend/apps/ms-cron/src",
         "test": "jest",
+        "build": "tsc --build .",
         "main": "doppler run -- ts-node -r tsconfig-paths/register src/nats/main.ts",
         "stream": "doppler run -- ts-node -r tsconfig-paths/register src/nats/stream.ts"
     },
