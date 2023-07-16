@@ -61,8 +61,6 @@
     "pretty": true
   },
   "exclude": [
-    ".yarn",
-    ".cache.ti.api.gs.ru.shares.report",
     "node_modules",
     "arch-diagramms",
     "dist",
@@ -75,10 +73,5 @@
     "**/tests/*.test.ts",
     "*.test.ts"
   ],
-  "include": ["src"],
-  "paths": {
-    "src/*": [
-      "src/*", "**/*"
-    ],
-  }
+  "include": ["src"]
 }
