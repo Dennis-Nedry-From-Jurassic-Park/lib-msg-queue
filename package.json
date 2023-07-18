@@ -14,6 +14,7 @@
         "pnpm:setup": "npx pnpm setup",
         "pnpm:update": "npx pnpm add -g pnpm",
         "pnpm:install": "npx pnpm install",
+        "pnpm:update-deps": "pnpm update --latest",
         "----------- docker -----------": "----------- docker -----------",
         "lint": "eslint --color --fix --ext .ts,.js,.jsx packages/backend/apps/ms-src/src",
         "lint-q": "eslint --color --fix --quiet --ext .ts,.js,.jsx packages/backend/apps/ms-cron/src",
@@ -23,25 +24,23 @@
         "stream": "doppler run -- ts-node -r tsconfig-paths/register src/nats/stream.ts"
     },
     "dependencies": {
-        "nats": "^2.13.1",
-        "safe-stable-stringify": "2.4.1",
-        "telegraf": "^4.11.2",
-        "ts-node": "^10.9.1",
-        "tslib": "^2.4.1",
-        "ttypescript": "^1.5.15",
-        "typescript": "^4.7.4",
-        "@types/jest": "29.4.0",
-
-        "@jest/types": "29.4.2",
-        "@types/node": "^18.11.18",
-        "jest": "29.4.2",
+        "@types/node": "^20.4.2",
         "jest-ts-auto-mock": "^2.1.0",
-        "ts-auto-mock": "^3.6.4",
-        "ts-jest": "^29.0.5",
-        "tsconfig-paths": "^4.1.2"
+        "nats": "^2.15.1",
+        "safe-stable-stringify": "2.4.3",
+        "telegraf": "^4.12.2",
+        "ts-auto-mock": "^3.7.1",
+        "ts-jest": "^29.1.1",
+        "ts-node": "^10.9.1",
+        "tsconfig-paths": "^4.2.0",
+        "tslib": "^2.6.0"
     },
     "devDependencies": {
-
+        "@jest/types": "29.6.1",
+        "@types/jest": "29.5.3",
+        "jest": "29.6.1",
+        "ttypescript": "^1.5.15",
+        "typescript": "^5.1.6"
     },
     "packageManager": "pnpm@8.6.7"
 }
