@@ -1,12 +1,6 @@
-import {
-    DiscardPolicy, Placement,
-    RetentionPolicy,
-    StorageType,
-    StreamConfig,
-    StreamUpdateConfig
-} from "nats/lib/nats-base-client/types";
 import {nats_client} from "./conn";
 import {pub0} from "./pub";
+import {DiscardPolicy, RetentionPolicy, StorageType, StreamConfig} from "nats";
 
 export const create_stream = async (
     stream: string,
